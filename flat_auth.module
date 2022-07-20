@@ -36,7 +36,7 @@ function flat_auth_menu() {
   ];
 
 
-  $items['admin/config/flat_auth'] = [
+  $items['admin/config/flat_deposit/flat_auth'] = [
 
     'title' => 'FLAT Auth Configuration',
     'description' => 'FLAT Auth Configuration',
