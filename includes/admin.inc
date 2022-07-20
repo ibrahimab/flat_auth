@@ -18,28 +18,28 @@ function flat_auth_admin_form($form, &$form_state) {
           '#type'          => 'textfield',
           '#title'         => t('Expiration time in seconds'),
           '#default_value' => variable_get('flat_auth_expiration_time', FLAT_AUTH_THRESHOLD_EXPIRE),
-          '#help_text'     => 'How long should a token be valid for',
+          '#description'     => 'How long should a token be valid for',
       ],
       'deletion_time' => [
 
         '#type'          => 'textfield',
         '#title'         => t('Deletion time in seconds'),
         '#default_value' => variable_get('flat_auth_deletion_time', FLAT_AUTH_THRESHOLD_DELETE),
-        '#help_text'     => 'How long until a token will be marked for deletion',
+        '#description'     => 'How long until a token will be marked for deletion',
       ],
       'max_error_count' => [
 
         '#type'          => 'textfield',
         '#title'         => t('Max error count until token is invalidated'),
         '#default_value' => variable_get('flat_auth_max_error_count', FLAT_AUTH_MAX_ERROR_COUNT),
-        '#help_text'     => 'How many times errors can occur until token is invalidated',
+        '#description'     => 'How many times errors can occur until token is invalidated',
       ],
       'max_usage_count' => [
 
         '#type'          => 'textfield',
         '#title'         => t('Max usage count'),
         '#default_value' => variable_get('flat_auth_max_usage_count', FLAT_AUTH_MAX_USAGE_COUNT),
-        '#help_text'     => 'How many times can a token be used',
+        '#description'     => 'How many times can a token be used',
       ],
     ];
 
