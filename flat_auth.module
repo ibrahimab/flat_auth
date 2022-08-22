@@ -109,8 +109,8 @@ function flat_auth_check_token() {
             return drupal_json_output([
 
                 'type' => 'success',
-                'expiration_time' => variable_get('flat_auth_expiration_time', FLAT_AUTH_THRESHOLD_EXPIRE),
-                'deletion_time' => variable_get('flat_auth_deletion_time', FLAT_AUTH_THRESHOLD_DELETE),
+                'expiration_time' => (int)variable_get('flat_auth_expiration_time', FLAT_AUTH_THRESHOLD_EXPIRE),
+                'deletion_time' => (int)variable_get('flat_auth_deletion_time', FLAT_AUTH_THRESHOLD_DELETE),
             ]);
         }
     }
@@ -153,8 +153,8 @@ function flat_auth_renew_token() {
                 return drupal_json_output([
 
                     'type' => 'success',
-                    'expiration_time' => variable_get('flat_auth_expiration_time', FLAT_AUTH_THRESHOLD_EXPIRE),
-                    'deletion_time' => variable_get('flat_auth_deletion_time', FLAT_AUTH_THRESHOLD_DELETE),
+                    'expiration_time' => (int)variable_get('flat_auth_expiration_time', FLAT_AUTH_THRESHOLD_EXPIRE),
+                    'deletion_time' => (int)variable_get('flat_auth_deletion_time', FLAT_AUTH_THRESHOLD_DELETE),
                 ]);
             }
         }
